@@ -9,7 +9,7 @@ with open('meetings.json') as file:
     data = load(file)
     for item in data:
         meeting = Meeting(
-            datetime.strptime(item['date'], '%d.%m.%Y %H:%M'),
+            datetime.strptime(item['data'], '%d.%m.%Y %H:%M'),
             item['title']
         )
         calendar.add_meeting(meeting)
